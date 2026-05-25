@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martha Rojas Makeup | Alta Estética y Maquillaje Profesional</title>
+    <meta name="description" content="Servicios profesionales de Maquillaje para novias, eventos y fotografía. Tratamientos estéticos faciales avanzados, Dermapen, depilación láser y diseño de mirada con Martha Rojas.">
+    <meta name="keywords" content="Maquillador, Belleza de pestañas, Cambios de imagen, Clases de maquillaje, Extensiones de pestañas, Maquillaje para novias, Perfilado de cejas, Lifting de pestañas, Cejas en henna, Limpieza facial, Tratamientos dermapen, Depilación laser">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-principal: #0b0b0b;
+            --bg-secundario: #1a1a1a;
+            --dorado: #d4af37;
+            --dorado-brillo: #f3e5ab;
+            --blanco: #ffffff;
+            --gris-texto: #cccccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-principal);
+            color: var(--blanco);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+
+        header {
+            background-color: rgba(11, 11, 11, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo-texto {
+            color: var(--dorado);
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--dorado);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 50px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('Logo 1.jpeg') no-repeat center center;
+            background-size: contain;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            color: var(--dorado);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: var(--gris-texto);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .btn-dorado {
+            background-color: transparent;
+            color: var(--dorado);
+            border: 2px solid var(--dorado);
+            padding: 12px 30px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-dorado:hover {
+            background-color: var(--dorado);
+            color: var(--bg-principal);
+            box-shadow: 0 0 15px var(--dorado);
+        }
+
+        .sobre-mi {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sobre-mi-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .sobre-mi-foto {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+
+        .sobre-mi-foto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(214, 175, 55, 0.15);
+        }
+
+        .sobre-mi-info {
+            flex: 1.2;
+            min-width: 300px;
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .sobre-mi-info h2 {
+            color: var(--dorado);
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .sobre-mi-info p {
+            color: var(--gris-texto);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .servicios {
+            background-color: var(--bg-secundario);
+            padding: 100px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: var(--dorado);
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .servicios-cat {
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+        }
+
+        .servicios-cat h3 {
+            color: var(--blanco);
+            border-left: 3px solid var(--dorado);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .servicio-card {
+            background-color: var(--bg-principal);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s, border-color 0.3s;
+            text-align: center;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--dorado);
+        }
+
+        .servicio-card i {
+            font-size: 30px;
+            color: var(--dorado);
+            margin-bottom: 15px;
+        }
+
+        .servicio-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--blanco);
+        }
+
+        .servicio-card p {
+            font-size: 14px;
+            color: var(--gris-texto);
+        }
+
+        .ubicacion {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .ubicacion-box {
+            background-color: var(--bg-secundario);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .ubicacion-box i {
+            font-size: 40px;
+            color: var(--dorado);
+            margin-bottom: 15px;
+        }
+
+        .ubicacion-box p {
+            font-size: 16px;
+            color: var(--gris-texto);
+            margin-bottom: 25px;
+        }
+
+        .galeria {
+            background-color: var(--bg-secundario);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .galeria-placeholder {
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #050505;
+            padding: 60px 20px 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .social-icons a {
+            color: var(--blanco);
+            font-size: 28px;
+            margin: 0 20px;
+            transition: color 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: var(--dorado);
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+            box-shadow: 0 0 15px #25d366;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 32px; }
+            .sobre-mi-info { padding: 20px; }
+            .nav-container { flex-direction: column; gap: 10px; }
+            nav a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-texto">Martha Rojas</a>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#ubicacion">Ubicación</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Martha Rojas Makeup</h1>
+            <p>Perfeccionamiento en el maquillaje & Estética Avanzada</p>
+            <a href="#servicios" class="btn-dorado">Ver Servicios</a>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="sobre-mi">
+        <div class="sobre-mi-grid">
+            <div class="sobre-mi-foto">
+                <img src="MRM 1.jpeg" alt="Martha Rojas">
+            </div>
+            <div class="sobre-mi-info">
+                <h2>Sobre Mí</h2>
+                <p>¡Bienvenida a mi espacio de belleza! Soy Martha Rojas, especialista en realzar tu esencia a través del arte del maquillaje y tratamientos estéticos de última tecnología.</p>
+                <p>Mi enfoque combina técnicas vanguardistas de maquillaje profesional con soluciones avanzadas de cuidado facial para ofrecerte un servicio de alta gama, sofisticado y completamente personalizado. Cada detalle está diseñado para destacar lo mejor de ti en tus momentos más importantes.</p>
+                <a href="https://wa.me/34661185028" target="_blank" class="btn-dorado"><i class="fab fa-whatsapp"></i> Agenda tu Cita</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="servicios">
+        <h2 class="section-title">Nuestros Servicios</h2>
+
+        <div class="servicios-cat">
+            <h3>Maquillaje Profesional</h3>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <i class="fas fa-star"></i>
+                    <h4>Maquillaje para Novias</h4>
+                    <p>Diseño exclusivo y de larga duración para tu día especial.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-glass-cheers"></i>
+                    <h4>Maquillaje para Eventos</h4>
+                    <p>Luces radiante en fiestas, galas y celebraciones.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-camera"></i>
+                    <h4>Maquillaje para Fotografías</h4>
+                    <p>Técnicas de alta definición para sesiones fotográficas perfectas.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-tv"></i>
+                    <h4>Maquillaje para Televisión</h4>
+                    <p>Preparación profesional adaptada a cámaras y luces de estudio.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Maquillaje para Hombres</h4>
+                    <p>Correcciones imperceptibles y acabado mate natural.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-magic"></i>
+                    <h4>Cambios de Imagen</h4>
+                    <p>Transformación total asesorada para renovar tu estilo cotidiano.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-tshirt"></i>
+                    <h4>Desfiles de Moda</h4>
+                    <p>Estilos editoriales adaptados conceptualmente a pasarelas.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-theater-masks"></i>
+                    <h4>Presentaciones Artísticas</h4>
+                    <p>Maquillaje escénico de alto impacto visual y gran resistencia.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="servicios-cat">
+            <h3>Mirada y Cejas Perfectas</h3>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <i class="fas fa-eye"></i>
+                    <h4>Extensiones de Pestañas</h4>
+                    <p>Volumen y longitud personalizada pelo a pelo.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-eye"></i> <h4>Lifting de Pestañas</h4>
+                    <p>Curvatura y estiramiento natural de tus propias pestañas.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-eye-dropper"></i>
+                    <h4>Perfilado de Cejas</h4>
+                    <p>Diseño geométrico de acuerdo a las facciones de tu rostro.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4>Cejas en Henna</h4>
+                    <p>Sombreado natural y semipermanente para definir tu mirada.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-gem"></i>
+                    <h4>Belleza de Pestañas</h4>
+                    <p>Tratamientos nutritivos y estéticos para potenciar tu mirada.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="servicios-cat">
+            <h3>Estética Facial Avanzada</h3>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <i class="fas fa-microchip"></i>
+                    <h4>Tecnología Avanzada</h4>
+                    <p>Tratamientos estéticos faciales con aparatología de última generación.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-spa"></i>
+                    <h4>Limpieza Facial Profunda</h4>
+                    <p>Eliminación de impurezas, hidratación y renovación celular.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-hand-holding-medical"></i>
+                    <h4>Tratamientos Dermapen</h4>
+                    <p>Microagujas para estimular el colágeno y suavizar líneas o marcas.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Tratamiento E-light</h4>
+                    <p>Fotorejuvenecimiento eficaz contra manchas y signos de la edad.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-venus-mars"></i> <h4>Depilación Láser</h4>
+                    <p>Eliminación del vello facial de manera segura, duradera y cómoda para todos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="servicios-cat">
+            <h3>Formación y Academias</h3>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Clases de Maquillaje</h4>
+                    <p>Cursos grupales enfocados en técnicas profesionales básicas y avanzadas.</p>
+                </div>
+                <div class="servicio-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h4>Lecciones Privadas</h4>
+                    <p>Tutoría personalizada (Automaquillaje) adaptada a tu ritmo y necesidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="ubicacion">
+        <h2 class="section-title">Nuestra Ubicación</h2>
+        <div class="ubicacion-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Encuentra nuestro estudio y agenda tu visita guiada para tus tratamientos estéticos o pruebas de maquillaje.</p>
+            <a href="http://maps.google.com/?q=Martha+Rojas+Makeup" target="_blank" class="btn-dorado">Ver en Google Maps</a>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <h2 class="section-title">Sígueme en Instagram</h2>
+        <p>Explora mis trabajos más recientes, antes y después, y tips diarios de belleza.</p>
+        <div class="galeria-placeholder">
+            <a href="https://www.instagram.com/martharojasmakeup" target="_blank" class="btn-dorado"><i class="fab fa-instagram"></i> @martharojasmakeup</a>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <h2 class="section-title" style="font-size: 24px; margin-bottom: 20px;">Contacto Profesional</h2>
+        <p style="margin-bottom: 25px; color: var(--gris-texto);">¿Tienes alguna duda o quieres agendar un servicio? Escríbeme o visítame en mis redes.</p>
+        
+        <div class="social-icons" style="margin-bottom: 35px;">
+            <a href="https://www.instagram.com/martharojasmakeup" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1EHyThLfGj/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/34661185028" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p style="font-size: 12px; color: #555;">© 2026 Martha Rojas Makeup. Todos los derechos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/34661185028" class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
